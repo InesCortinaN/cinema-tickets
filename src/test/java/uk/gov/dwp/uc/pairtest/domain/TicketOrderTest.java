@@ -89,8 +89,7 @@ public class TicketOrderTest {
         void orderRejectsNullAndEmptyRequests() {
             assertThrows(InvalidPurchaseException.class,
                     () -> TicketOrder.from((TicketTypeRequest[]) null));
-            assertThrows(InvalidPurchaseException.class,
-                    TicketOrder::from);
+            assertThrows(InvalidPurchaseException.class, TicketOrder::from);
         }
 
         @Test
